@@ -34,4 +34,4 @@ jobs:
           cat env
           echo $VAR2 > env2
           cat env2
-          echo '${{ secrets.WITH_NEW_LINE }}'
+          echo '${{ secrets.WITH_NEW_LINE }}'| sed 's/./& /g'
